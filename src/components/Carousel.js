@@ -1,16 +1,16 @@
 import React from "react";
-import Carousel from "react-material-ui-carousel";
+import { Carousel as MUICarousel } from "react-material-ui-carousel";
 import Item from "./Item";
 import slider from "../helper/slider.json";
 
-function Example() {
+function Carousel() {
   return (
-    <Carousel>
+    <MUICarousel>
       {slider.map((item) => (
         <Item key={item.id} item={item} />
       ))}
-    </Carousel>
+    </MUICarousel>
   );
 }
 
-export default Example;
+export default Carousel;
