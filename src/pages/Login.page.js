@@ -81,12 +81,13 @@ const Login = () => {
         margin: "auto",
       }}
     >
-      <h1>Login</h1>
+      <h1>Connexion</h1>
       <TextField
         label="Email"
         type="email"
         variant="outlined"
         name="email"
+        size="small"
         value={form.email}
         onChange={onFormInputChange}
         style={{ marginBottom: "1rem" }}
@@ -96,15 +97,16 @@ const Login = () => {
         type="password"
         variant="outlined"
         name="password"
+        size="small"
         value={form.password}
         onChange={onFormInputChange}
         style={{ marginBottom: "1rem" }}
       />
       <Button variant="contained" color="primary" onClick={onSubmit}>
-        Login
+        Connexion
       </Button>
       <p>
-        Vous n'avez pas de compte ? <Link to="/signup">Signup</Link>
+        Vous n'avez pas de compte ? <Link to="/signup">Inscription</Link>
       </p>
     </form>
   );

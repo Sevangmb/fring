@@ -6,7 +6,6 @@ import Home from "./pages/Home.page";
 import Login from "./pages/Login.page";
 import PrivateRoute from "./pages/PrivateRoute.page";
 import Signup from "./pages/Signup.page";
-
 import PCarousel from "./pages/Carousel.page";
 
 const App = () => {
