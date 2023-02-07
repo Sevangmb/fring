@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 function DoubleCarousel() {
   return (
-    <Fragment>
+    <>
       <div
         style={{
           maxWidth: 1200,
@@ -32,7 +32,7 @@ function DoubleCarousel() {
           <img src="https://via.placeholder.com/1600x800" alt="placeholder" />
         </Carousel>
       </div>
-    </Fragment>
+    </>
   );
 }
 export default DoubleCarousel;

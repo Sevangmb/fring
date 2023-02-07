@@ -1,9 +1,9 @@
 import { Button, TextField } from "@mui/material";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/user.context";
 
-const Login = () => {
+function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,7 +28,7 @@ const Login = () => {
   // appropriate page once the authentication is done.
   const redirectNow = () => {
     const redirectTo = location.search.replace("?redirectTo=", "");
-    navigate(redirectTo ? redirectTo : "/");
+    navigate(redirectTo || "/");
   };
 
   // Once a user logs in to our app, we don’t want to ask them for their
@@ -110,6 +110,6 @@ const Login = () => {
       </p>
     </form>
   );
-};
+}
 
 export default Login;

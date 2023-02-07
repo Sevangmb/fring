@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+/* eslint-disable react/button-has-type */
+import React, { useState, useEffect } from "react";
 import "../carousel.css";
 
-const Carousel = (props) => {
+function Carousel(props) {
   const { children } = props;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,6 +45,6 @@ const Carousel = (props) => {
       </div>
     </div>
   );
-};
+}
 
 export default Carousel;

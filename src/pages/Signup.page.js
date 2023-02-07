@@ -1,9 +1,9 @@
 import { Button, TextField } from "@mui/material";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/user.context";
 
-const Signup = () => {
+function Signup() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,7 +23,7 @@ const Signup = () => {
   // As explained in the Login page.
   const redirectNow = () => {
     const redirectTo = location.search.replace("?redirectTo=", "");
-    navigate(redirectTo ? redirectTo : "/");
+    navigate(redirectTo || "/");
   };
 
   // As explained in the Login page.
@@ -74,6 +74,6 @@ const Signup = () => {
       </p>
     </form>
   );
-};
+}
 
 export default Signup;

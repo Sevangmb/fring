@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-useless-catch */
 import { createContext, useState } from "react";
 import { App, Credentials } from "realm-web";
 import { APP_ID } from "../realm/constants";
@@ -9,7 +12,7 @@ const app = new App(APP_ID);
 // across different components and pages.
 export const UserContext = createContext();
 
-export const UserProvider = ({ children }) => {
+export function UserProvider({ children }) {
   const [user, setUser] = useState(null);
 
   // Function to log in user into our App Service app using their email & password
@@ -46,12 +49,12 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  // Function to logout user from our App Services app
+  // Function to logout user from our App Servicesy app
   const logOutUser = async () => {
     if (!app.currentUser) return false;
     try {
       await app.currentUser.logOut();
-      // Setting the user to null once loggedOut.
+      // Setting the user to null once loggedOut.z
       setUser(null);
       return true;
     } catch (error) {
@@ -73,4 +76,4 @@ export const UserProvider = ({ children }) => {
       {children}
     </UserContext.Provider>
   );
-};
+}
