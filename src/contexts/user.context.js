@@ -12,7 +12,7 @@ const app = new App(APP_ID);
 // across different components and pages.
 export const UserContext = createContext();
 
-export function UserProvider({ children }) {
+export default function UserProvider({ children }) {
   const [user, setUser] = useState(null);
 
   // Function to log in user into our App Service app using their email & password

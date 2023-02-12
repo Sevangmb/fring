@@ -4,6 +4,7 @@ import { UserContext } from "../contexts/user.context";
 
 function PrivateRoute() {
   // Fetching the user from the user context.
+  console.log(UserContext);
   const { user } = useContext(UserContext);
   const location = useLocation();
   const redirectLoginUrl = `/login?redirectTo=${encodeURI(location.pathname)}`;
