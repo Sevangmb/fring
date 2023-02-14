@@ -1,6 +1,10 @@
+
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-useless-catch */
+
+import React from "react";
+
 import { createContext, useState } from "react";
 import { App, Credentials } from "realm-web";
 import { APP_ID } from "../realm/constants";
