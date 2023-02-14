@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
 const pages = ["PCarousel", "MesFring", "Stuff"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Login", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -164,7 +164,7 @@ function ResponsiveAppBar() {
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">
                     <Link
-                      style={{ textDecoration: "none", color: "white" }}
+                      style={{ textDecoration: "none", color: "black" }}
                       to={`/${setting}`}
                     >
                       {setting}
